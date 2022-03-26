@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: recursive_diff
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/recursive_diff/recursive_diff-{{ version }}.tar.gz
-  sha256: e2cbd5eec7162d9bdae062c16e4395209885a9bb66ce3feb1d7f245b42dbd5aa
+  sha256: 3c21cac59b4236fca84ee817fe9e659e9c7e0fbb703a76f0b99a82d63f7f234a
 
 build:
   noarch: python
@@ -17,19 +17,20 @@ build:
 
 requirements:
   build:
-    - python >=3.5
+    - python >=3.8
     - pip
+    - setuptools-scm
   run:
-    - python >=3.5
-    - numpy >=1.13
-    - pandas >=0.21
-    - xarray >=0.10.1
+    - python >=3.8
+    - numpy >=1.16
+    - pandas >=0.25
+    - xarray >=0.12
 
 test:
   imports:
     - recursive_diff
   requires:
-    - pytest >=3.6
+    - pytest
 
 about:
   home: https://github.com/crusaderky/recursive_diff
