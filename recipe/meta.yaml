@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: recursive_diff
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/recursive_diff/recursive_diff-{{ version }}.tar.gz
-  sha256: 3c21cac59b4236fca84ee817fe9e659e9c7e0fbb703a76f0b99a82d63f7f234a
+  sha256: 42c2a3f97fb3234d952d63f7d8a54063b559ff917c762a15f15d7d45baca16bc
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
   build:
     - python >=3.8
     - pip
+    - setuptools >=66
     - setuptools-scm
   run:
     - python >=3.8
