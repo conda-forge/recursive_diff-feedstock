@@ -30,8 +30,9 @@ requirements:
 test:
   imports:
     - recursive_diff
+  commands:
+    - ncdiff --help
   requires:
-    - pytest
     - python {{ python_min }}
 
 about:
